@@ -39,6 +39,14 @@ class Zenodo(DoiProvider):
                 "download": "uniform_resource_identifier",
                 "type": "metadata.resourceType.resourceTypeGeneral",
             },
+            {
+                "hostname": ["https://archive.materialscloud.org/record/", "http://archive.materialscloud.org/record/"],
+                "api": "https://archive.materialscloud.org/api/records/",
+                "filepath": "_files",
+                "filename": "filename",
+                "download": "links.download",
+                "type": "metadata.upload_type",
+            },
         ]
 
     def detect(self, doi, ref=None, extra_args=None):
